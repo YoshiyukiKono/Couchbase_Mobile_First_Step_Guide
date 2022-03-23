@@ -1,4 +1,4 @@
-package com.example.cbk30ce_java;
+package com.example.cbl3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,7 +10,7 @@ import com.couchbase.lite.*;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "CBL";
+    private static final String TAG = "CBL"
     private static final String DB_NAME = "cbl";
     private Context cntx = this;
 
