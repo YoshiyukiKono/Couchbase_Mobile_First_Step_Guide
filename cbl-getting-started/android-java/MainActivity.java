@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         // ドキュメント取得、変更結果確認
         Document document = database.getDocument(mutableDoc.getId());
-        Log.i(TAG, String.format("Document ID : %s", document.getId()));
+        Log.i(TAG, String.format("ドキュメントID: %s", document.getId()));
         Log.i(TAG, String.format("名前: %s %s", document.getString("last-name"), document.getString("first-name")));
 
         // クエリ実行
