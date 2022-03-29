@@ -67,8 +67,6 @@ public class MainActivity extends AppCompatActivity {
                             .from(DataSource.database(database))
                             .where(Expression.property("type").equalTo(Expression.string("user")))
                             .execute();
-            Log.i(TAG,
-                    String.format("件数: %d", rs.allResults().size()));
 
             for (Result result : rs) {
                 Dictionary userProps = result.getDictionary(0);
