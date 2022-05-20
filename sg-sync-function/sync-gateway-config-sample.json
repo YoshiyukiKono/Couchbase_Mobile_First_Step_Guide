@@ -1,0 +1,101 @@
+{
+    "interface": ":4984",
+    "log": [ "*" ],
+    "logging": {
+        "log_file_path": "/var/tmp/sglogs",
+        "console": {
+            "log_level": "debug",
+            "log_keys": [ "*" ]
+        },
+        "error": {
+            "enabled": true,
+            "rotation": {
+                "max_size": 20,
+                "max_age": 180
+            }
+        },
+        "warn": {
+            "enabled": true,
+            "rotation": {
+                "max_size": 20,
+                "max_age": 90
+            }
+        },
+        "info": {
+            "enabled": false
+        },
+        "debug": {
+            "enabled": false
+        }
+    },
+    "disable_persistent_config": true,
+    "server_tls_skip_verify": true,
+    "databases": {
+        "travel-sample": {
+            "import_docs": true,
+            "bucket": "travel-sample",
+            "server": "couchbases://cb-server",
+            "enable_shared_bucket_access": true,
+            "delta_sync": {
+                "enabled": true
+            },
+            "username": "Administrator",
+            "password": "password",
+            "users": {
+                "admin": {"password": "password","admin_channels": [ "*" ] },
+                "demo": {
+                    "password": "password",
+                    "admin_channels": [ "*" ]
+                },
+                "priya": { "password": "password" }
+            },
+            "num_index_replicas": 0,
+	        "import_filter": `
+            function(doc) {
+            /* Just ignore all the static travel-sample files */
+           	if (doc._deleted == true ) {
+	      		return true;
+        		}
+           	if (doc.type == "landmark" || doc.type == "hotel" || doc.type == "airport" || doc.type == "airline" || doc.type == "route") {
+             		return false;
+           	}
+          	return true;
+        		}`,
+            "sync": `
+			function(doc, oldDoc, meta) {
+				if (doc._deleted) {
+					// ドキュメント削除時の分岐
+					// ロールの検証: editorロールを持つユーザーによる削除でない場合、同期を拒否する。
+					requireRole("editor"); 
+					// ユーザー権限の検証: writersプロパティに定義されているユーザーによる更新でない場合、同期を拒否する。
+					requireUser(oldDoc.writers); 
+					// 後続のロジックをスキップ
+					return;
+				}
+			
+				// 必須プロパティの検証
+				if (!doc.title || !doc.creator || !doc.channels || !doc.writers) { 
+					throw({forbidden: "Missing required properties"});
+				} else if (doc.writers.length == 0) {
+					throw({forbidden: "No writers"});
+				}
+			
+				if (oldDoc == null) {
+					// 新規ドキュメント作成時の分岐
+					// ロールの検証: editorロールを持つユーザーによる作成でない場合、同期を拒否する。
+					requireRole("editor"); 
+					// ユーザー権限の検証: creatorプロパティに定義されているユーザーと実行ユーザーが同一でない場合、同期を拒否する。
+					requireUser(doc.creator)
+				} else {
+					// 既存ドキュメント更新時の分岐
+					// ユーザー権限の検証: writersプロパティに定義されているユーザーによる更新でない場合、同期を拒否する。
+					requireUser(oldDoc.writers); 
+					// 変更不可プロパティの検証: creatorプロパティが変更されている場合、同期を拒否する。
+					if (doc.creator != oldDoc.creator) {
+						throw({forbidden: "Can't change creator"}); 
+					}
+				}
+			}`
+        }
+    }
+}
