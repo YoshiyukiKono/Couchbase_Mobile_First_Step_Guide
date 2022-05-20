@@ -7,7 +7,7 @@
 - 第1章 なぜ、Couchbase Mobile なのか?
 - 第2章 Couchbase Lite データベース
 - 第3章 Couchbase Lite クエリ
-- [第4章 Couchbase Lite を使ってみる](./getting-started)
+- [第4章 Couchbase Lite を使ってみる](./cbl-getting-started)
 - 第5章 Couchbase Lite クエリビルダーAPI
 - 第6章 Couchbase Lite SQL++/N1QL クエリAPI
 - 第7章 Couchbase Lite インデックス
@@ -17,7 +17,7 @@
 - 第11章 Couchbase Lite ツール
 - 第12章 クロスプラットフォーム開発
 - 第13章 Sync Gateway コンセプト
-- 第14章 Sync 関数
+- [第14章 Sync 関数](./sg-sync-function)
 - 第15章 Sync Gateway 管理
 - 第16章 Sync Gateway セキュリティ
 - 第17章 Sync Gateway デプロイメント
@@ -30,6 +30,6 @@
 - 第24章 Couchbase Mobile 競合解決
 - 第25章 Couchbase Mobile 設計パターン
 - 第26章 Couchbase Mobile 環境構築
-- 第27章 Couchbase Mobile を体験する
+- [第27章 Couchbase Mobile を体験する](./cbm-tutorial)
 - 付録A ピアツーピア同期
 - 付録B 予測クエリ
