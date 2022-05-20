@@ -35,7 +35,7 @@
 - [第21章 Couchbase Server クライアントとの共存](./sg-with-cb)
 - [第22章 Couchbase Lite レプリケーション](./cbl-replication)
 - 第23章 Couchbase Mobile 内部機構
-- 第24章 Couchbase Mobile 競合解決
+- [第24章 Couchbase Mobile 競合解決](./conflict-resolution)
 - 第25章 Couchbase Mobile 設計パターン
 - [第26章 Couchbase Mobile 環境構築](./cbm-environment)
 - [第27章 Couchbase Mobile を体験する](./cbm-tutorial)
