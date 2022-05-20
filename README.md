@@ -22,7 +22,7 @@
 - [第8章 Couchbase Lite 全文検索](./cbl-fts)
 - 第9章 Couchbase Lite C 言語サポート
 - [第10章 Couchbase Lite ロギング](./cbl-log)
-- [第11章 Couchbase Lite ツール]((./cbl-tool)
+- [第11章 Couchbase Lite ツール](./cbl-tool)
 - 第12章 クロスプラットフォーム開発
 - 第13章 Sync Gateway コンセプト
 - [第14章 Sync 関数](./sg-sync-function)
