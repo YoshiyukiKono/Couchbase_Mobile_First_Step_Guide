@@ -29,7 +29,7 @@
 - 第12章 クロスプラットフォーム開発
 - 第13章 Sync Gateway コンセプト
 - [第14章 Sync 関数](./sg-sync-function)
-- [第15章 Sync Gateway セキュリティ](./sg-security)
+- 第15章 Sync Gateway セキュリティ
 - [第16章 Sync Gateway 管理](./sg-management)
 - [第17章 Sync Gateway デプロイメント](./sg-deploy)
 - [第18章 Sync Gateway システム連携](./sg-integration)
