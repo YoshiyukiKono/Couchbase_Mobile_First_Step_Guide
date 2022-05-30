@@ -1,3 +1,3 @@
 # Couchbase Lite クエリ
 
-- [サンプルコード](./QueryDryRunner)
+- [サンプルコード](./QueryDryRunner.java)
