@@ -1,3 +1,3 @@
 # Couchbase Lite データベース
 
-- [サンプルコード](DatabaseDryRunner)
+- [サンプルコード](./DatabaseDryRunner.java)
