@@ -1,6 +1,6 @@
-# Couchbase_Mobile_First_Step_Guide
+# Couchbase Mobile First Step Guide
 
-書籍「インプレスR&D 技術の泉シリーズ（NextPublishing）エッジコンピューティングプラットフォーム Couchbase Mobile ファーストステップガイド」リポジトリ
+このリポジトリは、書籍「エッジコンピューティングプラットフォーム Couchbase Mobile ファーストステップガイド」(インプレスR&D, 2022)を補完する目的で公開されています。
 
 ## 目次
 
