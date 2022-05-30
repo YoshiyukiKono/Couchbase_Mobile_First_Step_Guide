@@ -1,3 +1,6 @@
+```
+./bin/sync_gateway ./basic.json
+```
 
 ```
 echo -n "Administrator:password" | base64
