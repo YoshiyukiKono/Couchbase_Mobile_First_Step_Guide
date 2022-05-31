@@ -30,16 +30,17 @@ curl -vX PUT "http://localhost:4985/mybucket/_user/Edge1User"   -H "accept: appl
 curl -vX PUT "http://localhost:4985/mybucket/_role/Edge1"   -H "accept: application/json" -H "Content-Type: application/json"   -H 'authorization: Basic QWRtaW5pc3RyYXRvcjpwYXNzd29yZA=='   -d '{ "admin_channels": ["Channel2","Channel3"]}' 
 ```
 
-
+```
+curl -vX PUT 'http://localhost:4985/mybucket/_config/sync'   -H 'authorization: Basic QWRtaW5pc3RyYXRvcjpwYXNzd29yZA=='   -H 'Accept: application/json'  -H 'Content-Type: application/javascript'   -d 'function(doc,oldDoc, meta){ if (doc.published) { channel("public");} }'
 ```
 
 ```
+curl -X PUT localhost:4985/mybucket/_user/GUEST   -H 'authorization: Basic QWRtaW5pc3RyYXRvcjpwYXNzd29yZA=='   --data  '{"disabled":false, "admin_channels":["public"]}'
+```
 
-
-
-
-
-
+```
+curl  'http://localhost:4985/mybucket/'  -H 'authorization: Basic QWRtaW5pc3RyYXRvcjpwYXNzd29yZA==' 
+```
 
 
 ```
@@ -48,4 +49,8 @@ curl http://localhost:4985/mybucket/_user/Edge1User   -H 'authorization: Basic Q
 
 ```
 curl http://localhost:4985/mybucket/_role/Edge1   -H 'authorization: Basic QWRtaW5pc3RyYXRvcjpwYXNzd29yZA=='
+```
+
+```
+curl 'http://localhost:4985/mybucket/_config/sync' -H 'authorization: Basic QWRtaW5pc3RyYXRvcjpwYXNzd29yZA=='
 ```
