@@ -1,9 +1,15 @@
 package com.example.cbk30ce_java;
 
 import com.couchbase.lite.CouchbaseLiteException;
+import com.couchbase.lite.DataSource;
 import com.couchbase.lite.Database;
-import com.couchbase.lite.IndexBuilder;
-import com.couchbase.lite.*;
+import com.couchbase.lite.Expression;
+import com.couchbase.lite.FullTextFunction;
+import com.couchbase.lite.FullTextIndexConfiguration;
+import com.couchbase.lite.Ordering;
+import com.couchbase.lite.Query;
+import com.couchbase.lite.QueryBuilder;
+import com.couchbase.lite.SelectResult;
 
 public class FTSDryRunner {
 
