@@ -36,11 +36,39 @@ docker run -p 4984-4985:4984-4985 --network workshop --name sync-gateway -d -v %
 ```
 
 ```
+docker logs sync-gateway
+```
+
+```
 docker pull connectsv/try-cb-python-v2:6.5.0-server
 ```
+
 ```
+docker run -it -p 8080:8080 --network workshop --name try-cb-python connectsv/try-cb-python-v2:6.5.0-server
 ```
+
 ```
+curl -X GET http://localhost:4984/travel-sample/
 ```
+
 ```
+echo -n "demo:password" | base64
 ```
+
+
+```
+curl -X GET http://localhost:4984/travel-sample/ -H 'authorization: Basic ZGVtbzpwYXNzd29yZA=='
+```
+
+```
+docker stop cb-server sync-gateway
+```
+
+```
+docker rm cb-server sync-gateway try-cb-python
+```
+
+```
+docker rmi couchbase/server-sandbox:7.0.0 couchbase/sync-gateway:3.0.0-enterprise connectsv/try-cb-python-v2:6.5.0-server
+```
+
