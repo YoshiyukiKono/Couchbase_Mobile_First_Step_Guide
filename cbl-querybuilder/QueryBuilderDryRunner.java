@@ -5,7 +5,22 @@ import android.util.Log;
 
 import androidx.annotation.RequiresApi;
 
-import com.couchbase.lite.*;
+import com.couchbase.lite.CouchbaseLiteException;
+import com.couchbase.lite.DataSource;
+import com.couchbase.lite.Database;
+import com.couchbase.lite.Dictionary;
+import com.couchbase.lite.Expression;
+import com.couchbase.lite.Function;
+import com.couchbase.lite.Join;
+import com.couchbase.lite.Meta;
+import com.couchbase.lite.MutableDocument;
+import com.couchbase.lite.Ordering;
+import com.couchbase.lite.Query;
+import com.couchbase.lite.QueryBuilder;
+import com.couchbase.lite.Result;
+import com.couchbase.lite.ResultSet;
+import com.couchbase.lite.SelectResult;
+
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 
