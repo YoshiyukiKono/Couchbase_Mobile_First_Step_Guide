@@ -34,7 +34,7 @@
 - [第17章 Sync Gateway デプロイメント](./sg-deploy)
 - [第18章 Sync Gateway システム連携](./sg-integration)
 - 第19章 Sync Gateway 運用
-- [第20章 Sync Gateway ロギング](./sg-log)
+- 第20章 Sync Gateway ロギング
 - [第21章 Couchbase Server クライアントとの共存](./sg-with-cb)
 - [第22章 Couchbase Lite レプリケーション](./cbl-replication)
 - 第23章 Couchbase Mobile 内部機構
