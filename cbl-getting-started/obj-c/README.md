@@ -1,3 +1,3 @@
 # Objective-C
 
-- [サンプルコード]()
+- [サンプルコマンド](./commands.md)
