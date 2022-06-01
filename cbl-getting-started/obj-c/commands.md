@@ -1,0 +1,3 @@
+```
+carthage update --platform ios
+```
