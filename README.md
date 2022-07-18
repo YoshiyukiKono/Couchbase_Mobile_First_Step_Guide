@@ -42,5 +42,7 @@
 - 第25章 Couchbase Mobile 設計パターン
 - [第26章 Couchbase Mobile 環境構築](./cbm-environment)
 - [第27章 Couchbase Mobile を体験する](./cbm-tutorial)
+- 第28章 開発の実践に向けて
 - 付録A ピアツーピア同期
 - 付録B 予測クエリ
+- 付録C Couchbase Capella App Services
